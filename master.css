@@ -1,0 +1,25 @@
+html {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#time.vertical-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /*background: black;*/
+}
+
+/*div.col-sm-12 {
+  background: black;
+  height: 10%;
+}*/
+
+h1 {
+  display: block;
+  margin-top: -20px;
+  font-size: 80px;
+}
