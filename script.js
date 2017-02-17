@@ -1,28 +1,23 @@
 $(document).ready(function () {
   p = theEndIsNear();
 
-  $("#time h1")[0].innerHTML=p + "%";
+  var div = $("#time h1");
+
+  div.fadeOut('slow', function() {
+    div.html(p + "%");
+    div.fadeIn('fast');
+  });
+
+  div.innerHTML=p + "%";
   window.setInterval(function () {
     p = theEndIsNear();
 
-    $("#time h1")[0].innerHTML=p + "%";
-  },1500)
+    div.fadeOut('slow', function() {
+      div.html(p + "%");
+      div.fadeIn('fast');
+    });
+  },2000)
 });
-
-Date.daysBetween = function( date1, date2 ) {
-  //Get 1 day in milliseconds
-  var one_day=1000*60*60*24;
-
-  // Convert both dates to milliseconds
-  var date1_ms = date1.getTime();
-  var date2_ms = date2.getTime();
-
-  // Calculate the difference in milliseconds
-  var difference_ms = date2_ms - date1_ms;
-
-  // Convert back to days and return
-  return Math.round(difference_ms/one_day);
-}
 
 theEndIsNear = function () {
   var day_ms = 1000*60*60*24;
