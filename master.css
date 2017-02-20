@@ -9,14 +9,15 @@ html {
 #time.vertical-center {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   /*background: black;*/
 }
 
-/*div.col-sm-12 {
-  background: black;
-  height: 10%;
-}*/
+#nameInput {
+  clear: left;
+}
 
 h1 {
   display: block;

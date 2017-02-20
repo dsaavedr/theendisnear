@@ -3,19 +3,11 @@ $(document).ready(function () {
 
   var div = $("#time h1");
 
-  div.fadeOut('slow', function() {
-    div.html(p + "%");
-    div.fadeIn('fast');
-  });
-
-  div.innerHTML=p + "%";
+  div.html(p + "%");
   window.setInterval(function () {
     p = theEndIsNear();
 
-    div.fadeOut('slow', function() {
-      div.html(p + "%");
-      div.fadeIn('fast');
-    });
+    div.html(p + "%");
   },2000)
 });
 
