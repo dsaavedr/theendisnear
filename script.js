@@ -1,14 +1,14 @@
 $(document).ready(function () {
   p = theEndIsNear();
 
-  var div = $("#time h1");
+  var div = $("#time div.odometer");
 
   div.html(p + "%");
   window.setInterval(function () {
     p = theEndIsNear();
 
-    div.html(p + "%");
-  },2000)
+    div.html(p);
+  },2500)
 });
 
 theEndIsNear = function () {
@@ -31,4 +31,9 @@ theEndIsNear = function () {
   var p = (vida_s/tot_s)*100;
 
   return parseFloat(p.toFixed(10));
+}
+
+window.odometerOptions = {
+  format: '(,ddd).ddddddd',
+  duration: 2500
 }
