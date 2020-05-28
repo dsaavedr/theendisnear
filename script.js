@@ -3,10 +3,10 @@ $(document).ready(function () {
 
   $("#time h1")[0].innerHTML=p + "%";
   window.setInterval(function () {
-    p = theEndIsNear();
+    p = theEndIsNear(new Date(1997, 4, 14));
 
     $("#time h1")[0].innerHTML=p + "%";
-  },1500)
+  },1000)
 });
 
 Date.daysBetween = function( date1, date2 ) {
@@ -24,7 +24,7 @@ Date.daysBetween = function( date1, date2 ) {
   return Math.round(difference_ms/one_day);
 }
 
-theEndIsNear = function () {
+theEndIsNear = function (date) {
   var day_ms = 1000*60*60*24;
   var day_s = day_ms*1000;
 
@@ -43,5 +43,5 @@ theEndIsNear = function () {
 
   var p = (vida_s/tot_s)*100;
 
-  return parseFloat(p.toFixed(10));
+  return parseFloat(p.toFixed(7));
 }
