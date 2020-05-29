@@ -6,9 +6,15 @@ html {
   box-sizing: border-box;
 }
 
-#time.vertical-center {
+#time {
+  min-height: 100vh;
+}
+
+.vertical-center {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   /*background: black;*/
 }
@@ -20,6 +26,6 @@ html {
 
 h1 {
   display: block;
-  margin-top: -20px;
+  margin-top: -100px;
   font-size: 80px;
 }
