@@ -58,9 +58,7 @@ init = function () {
   t.classList.add("vertical-center");
   t.innerHTML = "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>";
 
-  s.innerHTML = possibilities[sc].name;
-
   window.setInterval(function() {
-    t.innerHTML = "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>";
+    t.innerHTML = "<p>" + possibilities[sc].name + "</p>" + "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>";
   }, 1000);
 }
