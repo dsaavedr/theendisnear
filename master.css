@@ -3,11 +3,15 @@ html {
   box-sizing: border-box;
 }
 
-#time.vertical-center {
+#time {
+  min-height: 100vh;
+}
+
+.vertical-center {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   /*background: black;*/
 }
@@ -16,8 +20,9 @@ html {
   clear: left;
 }
 
-.odometer {
-  margin-top: 100px;
+#time h1 {
+  display: block;
+  /* margin-top: -100px; */
   font-size: 80px;
   font-weight: 200;
   /*text-shadow: 0 2px 10px grey;*/
@@ -26,4 +31,21 @@ html {
   box-shadow: 0 2px 10px #aaa inset;
   /*border: 1px solid #aaa;*/
   overflow: hidden;
+}
+
+#scenario {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+hr#separator {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 80%;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }

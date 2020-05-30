@@ -1,0 +1,24 @@
+{
+  "name": "theendisnear",
+  "version": "1.0.0",
+  "description": "How much of your life have you spent?",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsaavedr/theendisnear.git"
+  },
+  "author": "Daniel Saavedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsaavedr/theendisnear/issues"
+  },
+  "homepage": "https://github.com/dsaavedr/theendisnear#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
