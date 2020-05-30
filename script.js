@@ -31,7 +31,7 @@ theEndIsNear = function (date, s) {
   var now = new Date();
   var finish = start;
   
-  // Días en una vida de 70 años
+  // Días en una vida de 's' años
 
   var tot_d = s*365.25;
   var tot_ms = tot_d*24*60*60*1000;
@@ -56,9 +56,9 @@ init = function () {
 
   t.innerHTML = "";
   t.classList.add("vertical-center");
-  t.innerHTML = "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>";
+  t.innerHTML = "<p>" + possibilities[sc].name + "</p> <hr id='separator'>" + "<p>You've lived:</p>" + "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>" + "<p> of your life.</p>";
 
   window.setInterval(function() {
-    t.innerHTML = "<p>" + possibilities[sc].name + "</p>" + "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>";
+    t.innerHTML = "<p>" + possibilities[sc].name + "</p> <hr id='separator'>" + "<p>You've lived:</p>" + "<h1>" + theEndIsNear(d, parseInt(possibilities[sc].age)) + "%" + "</h1>" + "<p> of your life.</p>";
   }, 1000);
 }
