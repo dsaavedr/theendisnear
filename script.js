@@ -42,7 +42,7 @@ theEndIsNear = function (date, s) {
 
   var p = (vida_s/tot_s)*100;
 
-  return parseFloat(p.toFixed(7));
+  return String(p.toFixed(7));
 }
 
 init = function () {
